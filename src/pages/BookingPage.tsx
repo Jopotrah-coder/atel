@@ -476,7 +476,7 @@ const BookingPage: React.FC = () => {
                       required
                     />
                     <span className="ml-2 text-gray-700">
-                      Я согласен с <a href="#" className="text-teal-700 hover:underline">условиями бронирования</a> и даю согласие на обработку персональных данных
+                      Я согласен с <button type="button" className="text-teal-700 hover:underline focus:outline-none">условиями бронирования</button> и даю согласие на обработку персональных данных
                     </span>
                   </label>
                 </div>

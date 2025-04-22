@@ -4,7 +4,7 @@ import SearchForm from '../components/SearchForm';
 import RoomCard from '../components/RoomCard';
 import { Room } from '../types';
 import { roomApi } from '../api/api';
-import { FaCheck, FaStar, FaLocationArrow, FaWifi, FaUtensils } from 'react-icons/fa';
+import { FaCheck, FaStar, FaLocationArrow } from 'react-icons/fa';
 
 const HomePage: React.FC = () => {
   const [featuredRooms, setFeaturedRooms] = useState<Room[]>([]);
@@ -114,6 +114,85 @@ const HomePage: React.FC = () => {
                 Бесплатный Wi-Fi, кондиционеры, спа-зона, тренажерный зал и ресторан с кавказской и европейской кухней.
               </p>
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Информация о Махачкале и активном отдыхе */}
+      <div className="py-16 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-3 text-teal-800">Откройте для себя Махачкалу</h2>
+            <div className="w-24 h-1 bg-lime-500 mx-auto mb-6"></div>
+            <p className="text-gray-600 max-w-3xl mx-auto">
+              Махачкала — уникальный город, где встречаются горы и море, древняя культура и современность. 
+              Наш отель расположен в идеальном месте для изучения всех достопримечательностей и красот Дагестана.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+              <img 
+                src="https://images.unsplash.com/photo-1605225198960-9bb26673f6e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                alt="Каспийское море" 
+                className="w-full h-56 object-cover"
+              />
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-3 text-teal-800">Морской отдых</h3>
+                <p className="text-gray-600 mb-4">
+                  Наслаждайтесь пляжами Каспийского моря с кристально чистой водой всего в 10 минутах ходьбы от отеля. 
+                  Идеально для купания, водных видов спорта и расслабляющих прогулок по побережью.
+                </p>
+                <button type="button" className="text-teal-700 font-semibold hover:text-teal-900 inline-flex items-center">
+                  Подробнее <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path></svg>
+                </button>
+              </div>
+            </div>
+            
+            <div className="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+              <img 
+                src="https://images.unsplash.com/photo-1623772472629-0380ef1f593e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                alt="Горы Дагестана" 
+                className="w-full h-56 object-cover"
+              />
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-3 text-teal-800">Горные экскурсии</h3>
+                <p className="text-gray-600 mb-4">
+                  Исследуйте захватывающие горные пейзажи Дагестана. Мы организуем однодневные и многодневные экскурсии 
+                  в Сулакский каньон, Гунибское плато и живописные аулы.
+                </p>
+                <button type="button" className="text-teal-700 font-semibold hover:text-teal-900 inline-flex items-center">
+                  Подробнее <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path></svg>
+                </button>
+              </div>
+            </div>
+            
+            <div className="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+              <img 
+                src="https://images.unsplash.com/photo-1577217416308-553afd23c492?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                alt="Дагестанская кухня" 
+                className="w-full h-56 object-cover"
+              />
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-3 text-teal-800">Культура и кухня</h3>
+                <p className="text-gray-600 mb-4">
+                  Познакомьтесь с богатой культурой Дагестана через его кухню, ремесла и традиции. 
+                  Попробуйте аутентичные блюда и посетите мастер-классы по традиционным ремеслам.
+                </p>
+                <button type="button" className="text-teal-700 font-semibold hover:text-teal-900 inline-flex items-center">
+                  Подробнее <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <div className="text-center mt-10">
+            <button
+              type="button"
+              className="inline-block border-2 border-teal-700 text-teal-700 hover:bg-teal-700 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+            >
+              Узнать больше о Дагестане
+            </button>
           </div>
         </div>
       </div>
